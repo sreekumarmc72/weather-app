@@ -1,0 +1,6 @@
+
+weather box 
+------------
+- day
+- image
+- temp (max, min)
