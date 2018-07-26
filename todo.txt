@@ -4,3 +4,12 @@ weather box
 - day
 - image
 - temp (max, min)
+
+- set property (date)
+- validate property
+- set default value for property
+- write http call to fetch the details, for kochi, in
+
+api.openweathermap.org/data/2.5/weather?q={city name},{country code}
+
+http://api.openweathermap.org/data/2.5/weather?q=kochi,in&appid=0af153d7253dd2712e9b724c1bb52b0e

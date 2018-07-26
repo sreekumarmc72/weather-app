@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Box />
+        <Box date="26-07-2018"/>
       </div>
     );
   }
