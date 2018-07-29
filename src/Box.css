@@ -1,12 +1,24 @@
 .box {
-    width: 200px;
-    height: 200px;
-    background: black;
+    width: 210px;
+    height: 210px;
     border-radius: 10px;
-    color: white;
     position: relative;
-    left: 45%;
-    top: 200px;
+    top: 130px;
+    box-shadow: 0 0 9px 1px black;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mainBox {
+    width: 210px;
+    height: 210px;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    box-shadow: 0 0 9px 1px black;
+    margin-left: 20px;
   }
   
   .day {
@@ -14,26 +26,63 @@
     left: 35%;
     top: 10%;
     font-size: 1.5em;
+    text-transform: uppercase;
   }
   
   .img {
     position: absolute;
-    left: 35%;
-    top: 40%;
-    font-size: 1.5em;  
+    left: 6%;
+    top: 37%;
+    font-size: 1.5em;
+  }
+
+  .img img {
+    width: 120%;
   }
   
   .temmax {
     position: absolute;
-    left: 27%;
-    bottom: 11%;
-    font-size: 1.7em
+    left: 35%;
+    top: 41%;
+    font-size: 2.4em;
   }
   
   .temmin {
     position: absolute;
-    left: 57%;
-    bottom: 11%;
+    left: 58%;
+    bottom: 39%;
     font-size: 1.7em;
     color: gray;
+  }
+
+  .unit {
+    position: absolute;
+    left: 80%;
+    top: 43%;
+    font-size: .9em;
+    color: gray;
+    cursor: pointer;
+  }
+
+  .selected {
+    color: black;
+  }
+
+  .miscDetails {
+    position: absolute;
+    margin: auto;
+    color: gray;
+    bottom: 6%;
+    text-align: left;
+    left: 10%;
+    font-size: 1em;
+  }
+
+  .head {
+    position: absolute;
+    text-align: left;
+    color: gray;
+    font-size: 1.1em;
+    left: 10%;
+    top: 7%;
   }
