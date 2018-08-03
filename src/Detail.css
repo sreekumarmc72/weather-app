@@ -1,0 +1,43 @@
+.detailsBox{
+    position: absolute;
+    height: 200px;
+    top: 38px;
+    left: 500px;
+}
+.dayBox{
+    position: relative;
+    width: 115px;
+    height: 111px;
+    float: left;
+    margin-right: 20px;
+    top: 35%;
+    border: 1px solid #8080807a;
+}
+.dayHead{
+    position: relative;
+    top: 10%;
+    font-size: 0.8em;
+    color: gray;
+    text-transform: uppercase;
+    
+}
+.dayBox img{
+    top: 5%;
+    position: relative;
+    display: block;
+    left: 26%;
+}
+.dayFoot{
+    position: relative;
+    bottom: -5%;
+    color: gray;
+}
+.dayFoot span:first-of-type{
+    color: black;
+    margin-right: 4%;
+}
+.status{
+    text-transform: capitalize;
+    font-size: 0.8em;
+    color: #443e3e;
+}

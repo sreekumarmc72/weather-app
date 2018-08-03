@@ -1,24 +1,23 @@
 .box {
     width: 210px;
     height: 210px;
-    border-radius: 10px;
     position: relative;
-    top: 130px;
-    box-shadow: 0 0 9px 1px black;
+    top: 130px;;
     float: left;
     margin-left: 20px;
     margin-bottom: 20px;
+    border: 1px solid rgb(184, 184, 221);
   }
 
   .mainBox {
     width: 210px;
     height: 210px;
-    border-radius: 10px;
+    border-radius: 6px;
     position: relative;
     top: 50px;
     left: 100px;
-    box-shadow: 0 0 9px 1px black;
     margin-left: 20px;
+    border: 1px solid green;
   }
   
   .day {
@@ -85,4 +84,5 @@
     font-size: 1.1em;
     left: 10%;
     top: 7%;
+    cursor: pointer;
   }

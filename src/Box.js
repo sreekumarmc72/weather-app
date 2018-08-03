@@ -19,18 +19,32 @@ class Box extends Component {
     };
   }
 
-  componentDidMount() {
+    componentDidMount() {
+        this.getWeatherData(this.state.place);
+    }
 
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.place}&appid=0af153d7253dd2712e9b724c1bb52b0e`)
-      .then(res => {
-        console.log(res.data);
-        this.setState({openweathermap : res.data});
-      })
-  }
+    getWeatherData = (place) => {
+        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${place}&appid=0af153d7253dd2712e9b724c1bb52b0e`)
+        .then(res => {
+            this.setState({openweathermap : res.data});
+        });
+    }
 
-  changeUnit = (toUnit) => {
-    this.setState({unit : toUnit});
-  }
+    changeUnit = (toUnit) => {
+        this.setState({unit : toUnit});
+        if(this.state.currentCity) {
+            this.props.onChangeUnit(toUnit);
+        }
+    }
+    componentWillReceiveProps = (nextProps) => {
+        this.setState({place : nextProps.place});
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.place !== prevProps.place) {
+          this.getWeatherData(this.props.place);
+        }
+    }
 
   render() {
     let tempMaxKelvin = 0,
@@ -78,12 +92,14 @@ class Box extends Component {
               </div>;
     }
     
+    
+
     return (
         <div className={this.state.currentCity ? 'mainBox' : 'box'}>
-            <div className="head">
+            <div className="head" onClick={(e) => this.props.onPlaceSelect(this.state.place)}>
               <div className="selected">{mainStatus}</div>
               <div>{this.state.place}</div>
-              <div>{moment(day).format('ddd Do hh a')}</div>
+              <div>{moment.unix(day).format('ddd Do hh a')}</div>
             </div>
             <div className="img">
               <img src={imgSrc} alt={mainStatus} />
@@ -106,7 +122,7 @@ Box.propTypes = {
 }
 
 Box.defaultProps = {
-  date  :   '26-07-2018'
+    place  :   'Kochi,IN'
 }
 
 export default Box;
